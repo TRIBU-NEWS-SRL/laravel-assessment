@@ -11,6 +11,15 @@ class PostControllerTest extends TestCase
 {
     use RefreshDatabase;
 
+    /** @test */
+    public function test_on_the_where()
+    {
+        echo '
+            Warm up challenge:
+            The test below is not working, add the missing thing to make it works.
+        ';
+    }
+
     /**
      * @test
      */
