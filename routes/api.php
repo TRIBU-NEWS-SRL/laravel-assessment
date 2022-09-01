@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\CartsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/cart', [CartsController::class, 'show']);
+Route::post('/cart', [CartsController::class, 'store']);
+Route::delete('/cart', [CartsController::class, 'store']);
+
+Route::post('/order', [CartsController::class, 'store']);
