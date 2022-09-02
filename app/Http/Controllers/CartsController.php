@@ -5,19 +5,20 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CartRequest;
 use App\Http\Resources\CartResource;
 use App\Models\Cart;
-use App\Models\Item;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CartsController extends Controller
 {
     public function show(): JsonResource
     {
+        $user = User::find(1);
         $carts = Cart::where('user_id', 1)->get();
 
         return CartResource::collection($carts)->additional([
-            'user' => User::find(1)
+            'user' => $user,
         ]);
     }
 
@@ -33,9 +34,9 @@ class CartsController extends Controller
         return response()->json(null,204);
     }
 
-    public function destroy(Item $item): JsonResponse
+    public function destroy(Request $request): JsonResponse
     {
-        Cart::query()->where('user_id', 1)->where('item_id', $item->id)->firstOrFail()->delete();
+        Cart::query()->where('user_id', 1)->where('item_id', $request->get('item_id'))->firstOrFail()->delete();
 
         return response()->json(null, 204);
     }

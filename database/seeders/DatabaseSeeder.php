@@ -9,14 +9,9 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
     public function run()
     {
-        User::factory()->create();
+        User::factory()->create(['id' => 1]);
 
         Item::factory()->count(5)->state(new Sequence(
             ['name' => 'Tribu Standard'],
