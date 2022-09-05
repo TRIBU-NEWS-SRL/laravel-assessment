@@ -12,9 +12,9 @@ class MovieTest extends TestCase
     public function test_on_the_where()
     {
         echo '
-        The business Team enjoy the movie upload feature this "fast" as the file size is limited to 7MB, but as our business grow we would like
+        The business Team enjoy the movie upload feature this is "fast" as the file size is limited to 7MB, but as our business grow we would like
         to be able to upload to a size of 1GB, and the team would also like to improve the UX because at the moment we force the user to keep is web page live 
-        to not interrupt the process.
+        to not interrupt the upload process.
         
         The business team want the following improvements:
         - upload max 1GB
@@ -26,9 +26,9 @@ class MovieTest extends TestCase
         Info:
         It does NOT need to work!
         Just create required file and do some comments inside to explain whats going on.
-        Checkout Actions/PostProcess to see how we do the trick.
+        Have a look to Actions/PostProcess.php to see how we do the trick.
         
-        If you want to give some detail on some process you can we it in the function below 
+        If you want to give some details on some process you can do it within the function below 
         e.g: explain that you need to create a table to store all format to be processed and check when its done to send the mail,
         this is just an idea I do not know myself how I should refactor this.
         ';
