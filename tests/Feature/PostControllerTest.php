@@ -16,7 +16,7 @@ class PostControllerTest extends TestCase
     {
         echo '
             Warm up challenge:
-            The test below is not working, add the missing thing to make it works.
+            The test below is not working, add the missing things to make it works.
         ';
     }
 
