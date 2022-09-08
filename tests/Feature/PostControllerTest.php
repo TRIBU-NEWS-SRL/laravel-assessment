@@ -17,6 +17,9 @@ class PostControllerTest extends TestCase
         echo '
             Warm up challenge:
             The test below is not working, add the missing things to make it works.
+            
+            If you do not use Docker or MySql installation, you can check sqlite:
+            https://laravel.com/docs/9.x/database#sqlite-configuration
         ';
     }
 
