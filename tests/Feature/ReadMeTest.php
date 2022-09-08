@@ -14,6 +14,9 @@ class ReadMeTest extends TestCase
         echo '
             You need to reverse engineering the code in order to create tests.
             Also, you might find some weird/broken thing, you are free to do some change.
+            
+            If you do not use Docker or MySql installation you can check sqlite:
+            https://laravel.com/docs/9.x/database#sqlite-configuration
         ';
     }
 }
